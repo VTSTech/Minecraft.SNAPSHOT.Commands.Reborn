@@ -1,6 +1,6 @@
 # Minecraft.SNAPSHOT.Commands.Reborn
 
-Written for 25w03a
+Written for 25w03a, Largely written by DeepSeek AI https://chat.deepseek.com
 
             '"=== Server Commands ===, '
             '.spawn - Teleport to spawn, '
