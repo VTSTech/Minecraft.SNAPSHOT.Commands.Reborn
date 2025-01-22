@@ -1,6 +1,6 @@
 # Minecraft.SNAPSHOT.Commands.Reborn
 
-Written for 25w03a, Largely written by DeepSeek AI https://chat.deepseek.com
+Written for 25w04a, Largely written by DeepSeek AI https://chat.deepseek.com
 
             '"=== Server Commands ===, '
             '.spawn - Teleport to spawn, '
@@ -15,4 +15,4 @@ Written for 25w03a, Largely written by DeepSeek AI https://chat.deepseek.com
             '.tpdeny - Deny teleport request, '
             '.help - Show this menu"'
 
-![image](https://github.com/user-attachments/assets/1594c183-b792-430b-bc45-9b0d3b575b1b)
+![image](https://github.com/user-attachments/assets/d25d8303-239e-4a6c-94a5-26d20342fe65)
