@@ -301,21 +301,10 @@ class CommandHandler:
 
     async def cmd_help(self, player: str):
         """Show help menu"""
-        help_msg = (
-            '"=== Server Commands ===, '
-            '.spawn - Teleport to spawn, '
-            '.sethome - Set home, '
-            '.home - Teleport home, '
-            '.setwarp <name> - Set warp, '
-            '.warp <name> - Teleport to warp, '
-            '.warps - List warps, '
-            '.rtp - Random teleport, '
-            '.tpa <player> - Request teleport, '
-            '.tpaccept - Accept teleport request, '
-            '.tpdeny - Deny teleport request, '
-            '.help - Show this menu"'
-        )
-        await self.server.execute(f'tell {player} {help_msg}')
+        # First message with basic commands
+        await self.server.execute(f'tell {player} Commands: .spawn, .sethome, .home, .setwarp, .warp')
+        # Second message with remaining commands
+        await self.server.execute(f'tell {player} Commands: .warps, .rtp, .tpa, .tpaccept, .tpdeny, .help')
 
     async def send_message(self, player: str, message: str):
         """Send formatted message"""
