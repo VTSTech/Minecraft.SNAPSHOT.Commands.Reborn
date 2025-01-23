@@ -2,6 +2,8 @@
 
 Written for 25w04a, Largely written by DeepSeek AI https://chat.deepseek.com
 
+https://www.youtube.com/watch?v=Gj_I_N5Cw9Q
+
             '"=== Server Commands ===, '
             '.spawn - Teleport to spawn, '
             '.sethome - Set home, '
