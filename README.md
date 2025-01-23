@@ -2,7 +2,7 @@
 
 Written for 25w04a, Largely written by DeepSeek AI https://chat.deepseek.com
 
-![youtube](https://www.youtube.com/watch?v=Gj_I_N5Cw9Q)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Gj_I_N5Cw9Q?si=maEB5f7GMkSCBLxk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
             '"=== Server Commands ===, '
             '.spawn - Teleport to spawn, '
