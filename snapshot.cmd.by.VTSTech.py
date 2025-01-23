@@ -22,6 +22,7 @@ CONFIG = {
     "rtp_radius": 35000,
     "autosave_interval": 1776,
     "autoclear_interval": 3625,
+    "motd": "Welcome to 25w04a SNAPSHOT Server by VTSTech! Use .help for commands. GitHub: VTSTech Web: www.vts-tech.org - Enjoy your stay!",
     "tpa_timeout": 30  # Added TPA timeout configuration
 }
 
@@ -54,6 +55,11 @@ class MinecraftServer:
             
             logger.info(line)
             
+            # Detect player joins
+            if match := re.search(r'(\w+) joined the game', line):
+                player = match.group(1)
+                await self.command_handler.send_motd(player)
+                            
             # Handle player commands
             if match := re.search(r'<([^>]+)> \.(\w+)(?:\s+(.*))?', line):
                 player, command, args_str = match.groups()
@@ -118,6 +124,13 @@ class CommandHandler:
         asyncio.create_task(self.load_warps())
         asyncio.create_task(self.check_tpa_timeouts())  # Added TPA timeout task
 
+    async def send_motd(self, player: str):
+        """Send MOTD to newly joined player"""
+        motd_lines = CONFIG["motd"].split('\n')
+        for line in motd_lines:
+            await self.send_message(player, f"§a{line}")
+            await asyncio.sleep(0.5)  # Prevent message spamming
+            
     async def check_tpa_timeouts(self):
         """Periodically clear expired TPA requests"""
         while True:
